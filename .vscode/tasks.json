@@ -1,0 +1,39 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build server dbg",
+            "type": "shell",
+            "command": "bazel build //server:server --cxxopt=-std=c++17 --compilation_mode=dbg",
+            "group": {
+                "kind": "build"
+            },
+        },
+        {
+            "label": "build server release",
+            "type": "shell",
+            "command": "bazel build //server:server --cxxopt=-std=c++17 --compilation_mode=opt",
+            "group": {
+                "kind": "build"
+            },
+        },
+        {
+            "label": "build client dbg",
+            "type": "shell",
+            "command": "bazel build //client:client --cxxopt=-std=c++17 --compilation_mode=dbg",
+            "group": {
+                "kind": "build"
+            },
+        },
+        {
+            "label": "build client release",
+            "type": "shell",
+            "command": "bazel build //client:client --cxxopt=-std=c++17 --compilation_mode=opt",
+            "group": {
+                "kind": "build"
+            },
+        }
+    ]
+}

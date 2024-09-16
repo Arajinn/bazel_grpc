@@ -1,0 +1,57 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "launch server dbg",
+            "type": "cppdbg",
+            "preLaunchTask": "build server dbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bazel-bin/server/server",
+            "cwd": "${workspaceFolder}/bazel-bin/server/server.runfiles/_main",
+            "linux": {
+                "sourceFileMap": {
+                   "/proc/self/cwd": "${workspaceFolder}",
+                }
+            }
+        },
+        {
+            "name": "launch server release",
+            "type": "cppdbg",
+            "preLaunchTask": "build server release",
+            "request": "launch",
+            "program": "${workspaceFolder}/bazel-bin/server/server",
+            "cwd": "${workspaceFolder}/bazel-bin/server/server.runfiles/_main",
+            "linux": {
+                "sourceFileMap": {
+                   "/proc/self/cwd": "${workspaceFolder}",
+                }
+            }
+        },
+        {
+            "name": "launch client dbg",
+            "type": "cppdbg",
+            "preLaunchTask": "build client dbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bazel-bin/client/client",
+            "cwd": "${workspaceFolder}/bazel-bin/client/client.runfiles/_main",
+            "linux": {
+                "sourceFileMap": {
+                   "/proc/self/cwd": "${workspaceFolder}",
+                }
+            }
+        },
+        {
+            "name": "launch client release",
+            "type": "cppdbg",
+            "preLaunchTask": "build client release",
+            "request": "launch",
+            "program": "${workspaceFolder}/bazel-bin/client/client",
+            "cwd": "${workspaceFolder}/bazel-bin/client/client.runfiles/_main",
+            "linux": {
+                "sourceFileMap": {
+                   "/proc/self/cwd": "${workspaceFolder}",
+                }
+            }
+        }
+    ]
+}
